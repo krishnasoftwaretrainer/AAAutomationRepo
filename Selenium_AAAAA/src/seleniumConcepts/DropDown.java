@@ -1,4 +1,6 @@
 package seleniumConcepts;
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,7 +17,7 @@ public class DropDown {
 		driver.get("https://demo.automationtesting.in/Register.html");
 		
 		JavascriptExecutor js=(JavascriptExecutor)driver;
-		js.executeScript("window.scrollBy(0,600)");//Top to Bottom scroll
+		js.executeScript("window.scrollBy(0,800)");//Top to Bottom scroll
 		Thread.sleep(2000);
 		/*
 		js.executeScript("window.scrollBy(0,-500)");//Bottom to Top scroll
@@ -31,12 +33,27 @@ public class DropDown {
 		skillsDD.click();
 		
 		Select select=new Select(skillsDD);
+		Thread.sleep(2000);
+		List<WebElement> options=select.getOptions();
+		
+		for(int i=1;i<options.size();i++)
+		{
+			System.out.println(options.get(i).getText());
+		}
+		/*
+		for(WebElement option:options)
+		{
+			System.out.println(option.getText());
+		} */
+		
+		
+		
 		//select.selectByIndex(4); //Select by index
 		//select.selectByValue("Client Support"); //Select by value
-		select.selectByVisibleText("Desktop Publishing"); //Select by visible text
+		//select.selectByVisibleText("Desktop Publishing"); //Select by visible text
 		Thread.sleep(2000);
 		//Click outside the dropdown to close it
-		actions.click().perform();
+		//actions.click().perform();
 		
 	}
 
