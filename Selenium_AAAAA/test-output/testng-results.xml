@@ -1,24 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="3" passed="1" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-02-19T21:02:02 IST" name="Default suite" finished-at="2026-02-19T21:02:32 IST" duration-ms="29520">
+  <suite started-at="2026-02-21T21:07:14 IST" name="Failed suite [Swag_Suite]" finished-at="2026-02-21T21:07:22 IST" duration-ms="8353">
     <groups>
     </groups>
-    <test started-at="2026-02-19T21:02:02 IST" name="Default test" finished-at="2026-02-19T21:02:32 IST" duration-ms="29520">
-      <class name="testng.SwagLogin">
-        <test-method signature="SwagValidValidLogin()[pri:0, instance:testng.SwagLogin@6a28ffa4]" started-at="2026-02-19T21:02:02 IST" name="SwagValidValidLogin" finished-at="2026-02-19T21:02:22 IST" duration-ms="19079" status="FAIL">
+    <test started-at="2026-02-21T21:07:14 IST" name="AllTests(failed)" finished-at="2026-02-21T21:07:22 IST" duration-ms="8353">
+      <class name="TestNGSuit.Swag_ValidInValid">
+        <test-method is-config="true" signature="BrowserConfig()[pri:0, instance:TestNGSuit.Swag_ValidInValid@4ac3c60d]" started-at="2026-02-21T21:07:14 IST" name="BrowserConfig" finished-at="2026-02-21T21:07:16 IST" duration-ms="2161" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BrowserConfig -->
+        <test-method signature="SwagValidInValidLogin()[pri:1, instance:TestNGSuit.Swag_ValidInValid@4ac3c60d]" started-at="2026-02-21T21:07:16 IST" name="SwagValidInValidLogin" finished-at="2026-02-21T21:07:18 IST" duration-ms="2028" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[The following asserts failed:
-Login Failed expected [https://www.saucedemo.com/inventory.html] but found [https://www.saucedemo.com/]]]>
+              <![CDATA[Error Message is not matching expected [Epic sadface: Username and password do not match any user in this servi] but found [Epic sadface: Username and password do not match any user in this service]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-Login Failed expected [https://www.saucedemo.com/inventory.html] but found [https://www.saucedemo.com/]
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
-at testng.SwagLogin.SwagValidValidLogin(SwagLogin.java:31)
+              <![CDATA[java.lang.AssertionError: Error Message is not matching expected [Epic sadface: Username and password do not match any user in this servi] but found [Epic sadface: Username and password do not match any user in this service]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at TestNGSuit.Swag_ValidInValid.SwagValidInValidLogin(Swag_ValidInValid.java:38)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -50,12 +55,26 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SwagValidValidLogin -->
-        <test-method signature="SwagValidInValidLogin()[pri:1, instance:testng.SwagLogin@6a28ffa4]" started-at="2026-02-19T21:02:22 IST" name="SwagValidInValidLogin" finished-at="2026-02-19T21:02:32 IST" duration-ms="10366" status="PASS">
+        </test-method> <!-- SwagValidInValidLogin -->
+        <test-method is-config="true" signature="BrowserTearDown()[pri:0, instance:TestNGSuit.Swag_ValidInValid@4ac3c60d]" started-at="2026-02-21T21:07:18 IST" name="BrowserTearDown" finished-at="2026-02-21T21:07:18 IST" duration-ms="213" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SwagValidInValidLogin -->
-      </class> <!-- testng.SwagLogin -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- BrowserTearDown -->
+      </class> <!-- TestNGSuit.Swag_ValidInValid -->
+      <class name="TestNGSuit.SwagValidValid">
+        <test-method is-config="true" signature="BrowserConfig()[pri:0, instance:TestNGSuit.SwagValidValid@3d74bf60]" started-at="2026-02-21T21:07:18 IST" name="BrowserConfig" finished-at="2026-02-21T21:07:22 IST" duration-ms="3025" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BrowserConfig -->
+        <test-method signature="SwagValidValidLogin()[pri:0, instance:TestNGSuit.SwagValidValid@3d74bf60]" started-at="2026-02-21T21:07:22 IST" name="SwagValidValidLogin" finished-at="2026-02-21T21:07:22 IST" duration-ms="680" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SwagValidValidLogin -->
+        <test-method is-config="true" signature="BrowserTearDown()[pri:0, instance:TestNGSuit.SwagValidValid@3d74bf60]" started-at="2026-02-21T21:07:22 IST" name="BrowserTearDown" finished-at="2026-02-21T21:07:22 IST" duration-ms="149" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- BrowserTearDown -->
+      </class> <!-- TestNGSuit.SwagValidValid -->
+    </test> <!-- AllTests(failed) -->
+  </suite> <!-- Failed suite [Swag_Suite] -->
 </testng-results>

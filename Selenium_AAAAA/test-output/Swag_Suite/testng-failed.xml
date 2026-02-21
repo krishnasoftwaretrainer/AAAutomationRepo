@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Swag_Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="AllTests(failed)">
+    <classes>
+      <class name="TestNGSuit.Swag_ValidInValid">
+        <methods>
+          <include name="BrowserTearDown"/>
+          <include name="SwagValidInValidLogin"/>
+          <include name="BrowserConfig"/>
+        </methods>
+      </class> <!-- TestNGSuit.Swag_ValidInValid -->
+      <class name="TestNGSuit.SwagValidValid">
+        <methods>
+          <include name="SwagValidValidLogin"/>
+          <include name="BrowserConfig"/>
+          <include name="BrowserTearDown"/>
+        </methods>
+      </class> <!-- TestNGSuit.SwagValidValid -->
+    </classes>
+  </test> <!-- AllTests(failed) -->
+</suite> <!-- Failed suite [Swag_Suite] -->

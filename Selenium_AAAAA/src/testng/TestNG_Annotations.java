@@ -5,20 +5,35 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-public class SwagLogin {
-	WebDriver driver;
+public class TestNG_Annotations {
+
+WebDriver driver;
 	
-	@Test(priority=0,invocationCount=2)
-	public void SwagValidValidLogin()
+	//@BeforeMethod
+	//@BeforeTest
+	@BeforeClass
+	public void BrowserConfig()
 	{
 		driver=new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.saucedemo.com/");
+		
+	}
+	
+	@Test(priority=0)
+	public void SwagValidValidLogin()
+	{
 		driver.findElement(By.id("user-name")).sendKeys("standard_user");
-		driver.findElement(By.id("password")).sendKeys("secretsauce");
+		driver.findElement(By.id("password")).sendKeys("secret_sauce");
 		driver.findElement(By.id("login-button")).click();
 		
 		String expectedURL="https://www.saucedemo.com/inventory.html";
@@ -27,16 +42,13 @@ public class SwagLogin {
 		//Assert.assertEquals(actualURL, expectedURL, "Login Failed");
 		SoftAssert soft=new SoftAssert();
 		soft.assertEquals(actualURL, expectedURL, "Login Failed");
-		driver.close();
 		soft.assertAll();
 	
 	}
+	
 	@Test(priority=1)
 	public void SwagValidInValidLogin()
 	{
-		driver=new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.get("https://www.saucedemo.com/");
 		driver.findElement(By.id("user-name")).sendKeys("standard_user");
 		driver.findElement(By.id("password")).sendKeys("secretsauce");
 		driver.findElement(By.id("login-button")).click();
@@ -45,21 +57,18 @@ public class SwagLogin {
 		WebElement ActualErrorMsgElemet=driver.findElement(By.xpath("//h3[@data-test='error']"));
 		String ActualErrorMsg=ActualErrorMsgElemet.getText();
 		Assert.assertEquals(ActualErrorMsg, ExceptedErrorMsg, "Error Message is not matching");
-			
-		driver.close();
-	
+					
 	}
-	@Test(enabled=false)
-	public void SwagBlankLogin()
+	
+	//@AfterMethod
+	//@AfterTest
+	@AfterClass
+	public void BrowserTearDown()
 	{
-		driver=new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.get("https://www.saucedemo.com/");
-		driver.findElement(By.id("user-name")).sendKeys("");
-		driver.findElement(By.id("password")).sendKeys("");
-		driver.findElement(By.id("login-button")).click();
-	driver.close();
-	
+			driver.close();
+			
+		
+		
 	}
-
+	
 }
