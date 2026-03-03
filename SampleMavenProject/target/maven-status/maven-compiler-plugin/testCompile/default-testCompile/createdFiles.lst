@@ -1,0 +1,11 @@
+pom\SwagPagesPageFactory.class
+runner\RunnerClass.class
+pom\BaseClass.class
+pom\SwagTestPF.class
+SwagTest\SwaqTestNG.class
+pom\Excelutilities.class
+stepDefinitions\Swag_StepDefinations.class
+SwagTest\SwagLogin.class
+hooks\Hooks.class
+pom\SwagPagesBy.class
+pom\SwagTest.class
