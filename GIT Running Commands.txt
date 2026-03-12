@@ -1,0 +1,228 @@
+
+HP@DESKTOP-DCUKDOL MINGW64 ~
+$
+
+HP@DESKTOP-DCUKDOL MINGW64 ~
+$ cd "D:\Akhil GIT"
+
+HP@DESKTOP-DCUKDOL MINGW64 /d/Akhil GIT
+$ ls -a
+./  ../
+
+HP@DESKTOP-DCUKDOL MINGW64 /d/Akhil GIT
+$ git init
+Initialized empty Git repository in D:/Akhil GIT/.git/
+
+HP@DESKTOP-DCUKDOL MINGW64 /d/Akhil GIT (master)
+$ ls -a
+./  ../  .git/
+
+HP@DESKTOP-DCUKDOL MINGW64 /d/Akhil GIT (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+HP@DESKTOP-DCUKDOL MINGW64 /d/Akhil GIT (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file1.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+HP@DESKTOP-DCUKDOL MINGW64 /d/Akhil GIT (master)
+$ git add .
+
+HP@DESKTOP-DCUKDOL MINGW64 /d/Akhil GIT (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   file1.html
+
+
+HP@DESKTOP-DCUKDOL MINGW64 /d/Akhil GIT (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   file1.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file1.html
+
+
+HP@DESKTOP-DCUKDOL MINGW64 /d/Akhil GIT (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   file1.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file1.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file2.html
+
+
+HP@DESKTOP-DCUKDOL MINGW64 /d/Akhil GIT (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   file1.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file1.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file2.html
+
+
+HP@DESKTOP-DCUKDOL MINGW64 /d/Akhil GIT (master)
+$ git add .
+
+HP@DESKTOP-DCUKDOL MINGW64 /d/Akhil GIT (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   file1.html
+        new file:   file2.html
+
+
+HP@DESKTOP-DCUKDOL MINGW64 /d/Akhil GIT (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   file1.html
+        new file:   file2.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file2.html
+
+
+HP@DESKTOP-DCUKDOL MINGW64 /d/Akhil GIT (master)
+$ git commit -m "2Files"
+[master (root-commit) e5dfb35] 2Files
+ 2 files changed, 5 insertions(+)
+ create mode 100644 file1.html
+ create mode 100644 file2.html
+
+HP@DESKTOP-DCUKDOL MINGW64 /d/Akhil GIT (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file3.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+HP@DESKTOP-DCUKDOL MINGW64 /d/Akhil GIT (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file2.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file3.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@DESKTOP-DCUKDOL MINGW64 /d/Akhil GIT (master)
+$ git add .
+
+HP@DESKTOP-DCUKDOL MINGW64 /d/Akhil GIT (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   file2.html
+        new file:   file3.html
+
+
+HP@DESKTOP-DCUKDOL MINGW64 /d/Akhil GIT (master)
+$ git commit -m "3 Files"
+[master 0e011f6] 3 Files
+ 2 files changed, 4 insertions(+), 1 deletion(-)
+ create mode 100644 file3.html
+
+HP@DESKTOP-DCUKDOL MINGW64 /d/Akhil GIT (master)
+$ git config –-list
+error: key does not contain a section: –-list
+
+HP@DESKTOP-DCUKDOL MINGW64 /d/Akhil GIT (master)
+$ git config -list
+error: did you mean `--list` (with two dashes)?
+
+HP@DESKTOP-DCUKDOL MINGW64 /d/Akhil GIT (master)
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+diff.astextplain.textconv=astextplain
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+gui.recentrepo=C:/Users/HP/Testing_Data
+gui.recentrepo=C:/Users/HP/SeleniumFeb2025BAtch
+user.name=QAKRISHNA
+user.email=krishnasoftwaretrainer@gmail.com
+user.mail=tronixtechkrishna@gmail.com
+:
